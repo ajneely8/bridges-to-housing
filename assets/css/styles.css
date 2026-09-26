@@ -450,6 +450,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
 .nav-toggle[aria-expanded="true"] .bars span:nth-child(3) { top: 6px; transform: rotate(-45deg); }
 
 .nav-extra { display: none; }
+.nav-close { display: none; }
 
 @media (max-width: 1000px) {
   :root { --header-h: 72px; }
@@ -479,7 +480,25 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
     transform: none;
     transition: opacity 0.25s, transform 0.3s var(--ease), visibility 0s;
   }
-  .nav ul { flex-direction: column; gap: 0; border-top: 1px solid var(--line-soft); }
+  .nav-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1rem;
+    right: var(--gutter);
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0;
+    border: 1.5px solid var(--line);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .nav-close svg { width: 20px; height: 20px; }
+  .nav-close:hover { border-color: var(--purple); color: var(--purple); }
+  .nav ul { flex-direction: column; gap: 0; border-top: 1px solid var(--line-soft); margin-top: 2.5rem; }
   .nav li { border-bottom: 1px solid var(--line-soft); }
   .nav a:not(.btn) {
     display: block;
