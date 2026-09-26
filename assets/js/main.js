@@ -11,12 +11,11 @@
      ------------------------------------------------------------------ */
   var intro = doc.getElementById('intro');
   if (intro) {
-    var skip = root.classList.contains('intro-skip') || reduceMotion;
+    var skip = reduceMotion;
     if (skip) {
       intro.parentNode.removeChild(intro);
       root.classList.remove('intro-pending');
     } else {
-      try { sessionStorage.setItem('bth-intro', '1'); } catch (e) { /* private mode */ }
       var finish = function () {
         if (intro.classList.contains('is-done')) { return; }
         intro.classList.add('is-done');
