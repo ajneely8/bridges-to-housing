@@ -582,7 +582,16 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 42% 45%;
+}
+.hero-figure .frame .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.1s ease;
+}
+.hero-figure .frame .slide.is-active {
+  opacity: 1;
+  z-index: 1;
 }
 .hero-figure .frame-wrap::before {
   content: "";
@@ -596,7 +605,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
 .hero-figure figcaption {
   position: relative;
   z-index: 2;
-  margin-top: 1.6rem;
+  margin-top: 2.25rem;
   font-size: 0.82rem;
   color: var(--muted);
   letter-spacing: 0.02em;
@@ -605,7 +614,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   position: absolute;
   z-index: 2;
   left: -1.25rem;
-  bottom: 3.5rem;
+  bottom: -1.25rem;
   background: var(--white);
   border-left: 4px solid var(--green);
   box-shadow: var(--shadow);
@@ -627,7 +636,7 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   .hero .wrap { grid-template-columns: 1fr; }
   .hero-figure { margin-top: 1rem; max-width: 560px; }
   .hero-figure .frame { aspect-ratio: 4 / 3; }
-  .hero-figure .badge { left: 0.75rem; bottom: 4.25rem; }
+  .hero-figure .badge { left: 0.75rem; bottom: -1rem; }
   .hero-figure .frame-wrap::before { inset: 0.8rem -0.8rem -0.8rem 0.8rem; }
 }
 @media (max-width: 480px) {

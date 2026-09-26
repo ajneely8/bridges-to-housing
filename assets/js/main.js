@@ -33,6 +33,40 @@
   }
 
   /* ------------------------------------------------------------------
+     Hero photo slideshow: fades between family photos
+     ------------------------------------------------------------------ */
+  var heroFrame = doc.getElementById('hero-slideshow');
+  if (heroFrame) {
+    var slides = heroFrame.querySelectorAll('.slide');
+    if (slides.length > 1 && !reduceMotion) {
+      var slideIndex = 0;
+      var slideTimer = null;
+      var showNextSlide = function () {
+        var next = (slideIndex + 1) % slides.length;
+        slides[slideIndex].classList.remove('is-active');
+        slides[next].classList.add('is-active');
+        slideIndex = next;
+      };
+      var startSlides = function () {
+        if (slideTimer) { return; }
+        slideTimer = window.setInterval(showNextSlide, 5000);
+      };
+      var stopSlides = function () {
+        window.clearInterval(slideTimer);
+        slideTimer = null;
+      };
+      startSlides();
+      heroFrame.addEventListener('mouseenter', stopSlides);
+      heroFrame.addEventListener('mouseleave', startSlides);
+      heroFrame.addEventListener('focusin', stopSlides);
+      heroFrame.addEventListener('focusout', startSlides);
+      doc.addEventListener('visibilitychange', function () {
+        if (doc.hidden) { stopSlides(); } else { startSlides(); }
+      });
+    }
+  }
+
+  /* ------------------------------------------------------------------
      Header: compact on scroll
      ------------------------------------------------------------------ */
   var header = doc.querySelector('.site-header');
