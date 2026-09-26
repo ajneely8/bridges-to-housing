@@ -593,23 +593,6 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   opacity: 1;
   z-index: 1;
 }
-.hero-figure .frame-wrap::before {
-  content: "";
-  position: absolute;
-  inset: 1.1rem -1.1rem -1.1rem 1.1rem;
-  border: 1.5px solid rgba(135, 41, 150, 0.35);
-  border-radius: var(--radius);
-  z-index: 0;
-}
-.hero-figure .frame { z-index: 1; }
-.hero-figure figcaption {
-  position: relative;
-  z-index: 2;
-  margin-top: 2.25rem;
-  font-size: 0.82rem;
-  color: var(--muted);
-  letter-spacing: 0.02em;
-}
 .hero-figure .badge {
   position: absolute;
   z-index: 2;
@@ -637,11 +620,9 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   .hero-figure { margin-top: 1rem; max-width: 560px; }
   .hero-figure .frame { aspect-ratio: 4 / 3; }
   .hero-figure .badge { left: 0.75rem; bottom: -1rem; }
-  .hero-figure .frame-wrap::before { inset: 0.8rem -0.8rem -0.8rem 0.8rem; }
 }
 @media (max-width: 480px) {
   .hero-figure .badge { position: static; margin-top: 1rem; max-width: none; }
-  .hero-figure figcaption { margin-top: 1rem; }
 }
 
 .trust {
