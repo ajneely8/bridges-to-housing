@@ -1,0 +1,71 @@
+---
+{
+  "title": "Contact | Bridges to Housing, Yuba City",
+  "description": "Contact Bridges to Housing at 909 Spiva Avenue, Yuba City, CA 95991. Call 530-755-3414, email office@bridgestohousing.org, or send a message. Office hours Monday to Friday, 9 am to 3 pm."
+}
+---
+    <section class="page-head">
+      <div class="wrap">
+        <p class="eyebrow">Contact</p>
+        <h1>We'd love to hear from you.</h1>
+        <p class="lede">Whether you are a potential client, volunteer or donor, or just an interested member of the Yuba-Sutter community, you can write, call, send a direct email, or use the form below.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="contact-title">
+      <div class="wrap split">
+        <div class="reveal">
+          <h2 id="contact-title" class="visually-hidden">Contact details</h2>
+          <div class="sidebar-card accent">
+            <h3>Bridges to Housing</h3>
+            <ul class="contact-lines">
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><address>Hands of Hope Center<br>909 Spiva Avenue<br>Yuba City, CA 95991</address></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Office hours<br>Monday through Friday, 9:00 am to 3:00 pm</span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg><a href="{{site.phoneHref}}">{{site.phone}}</a></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="m4 6 8 7 8-7"/></svg><a href="mailto:{{site.email}}">{{site.email}}</a></li>
+              <li><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22h3.4z"/></svg><a href="{{site.facebook}}" target="_blank" rel="noopener">Visit us on Facebook</a></li>
+            </ul>
+            <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=909+Spiva+Avenue+Yuba+City+CA+95991" target="_blank" rel="noopener">Get directions</a>
+          </div>
+          <iframe class="map-embed mt-2" src="https://www.google.com/maps?q=909+Spiva+Avenue,+Yuba+City,+CA+95991&output=embed" title="Map showing the Bridges to Housing office at 909 Spiva Avenue, Yuba City" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+
+        <div class="reveal" data-delay="1">
+          <h2 style="font-size:clamp(1.5rem,2.4vw,2rem)">Send us a message</h2>
+          <p class="text-muted">We will reply during office hours. If you need housing help, calling or visiting the office is the fastest way to reach us.</p>
+          <form class="form mt-2" id="contact-form" action="https://api.web3forms.com/submit" method="post" data-access-key="" data-to="{{site.email}}" novalidate>
+            <div class="row">
+              <div class="field">
+                <label for="cf-name">Name <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-name" name="name" type="text" autocomplete="name" required>
+              </div>
+              <div class="field">
+                <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+                <input id="cf-email" name="email" type="email" autocomplete="email" required>
+              </div>
+            </div>
+            <div class="field">
+              <label for="cf-subject">Subject</label>
+              <input id="cf-subject" name="subject" type="text">
+            </div>
+            <div class="field">
+              <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+              <textarea id="cf-message" name="message" required></textarea>
+              <span class="hint">Please do not include sensitive personal or financial details in this form.</span>
+            </div>
+            <div class="honey" aria-hidden="true"><label>Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <div class="actions">
+              <button class="btn btn-lg" type="submit">Send message</button>
+              <span class="text-muted" style="font-size:0.85rem">Required fields are marked with *</span>
+            </div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight section-paper" aria-label="Note about details">
+      <div class="wrap wrap-narrow center">
+        <p class="text-muted">While every effort is made to ensure the information on this website is accurate and up to date, changes could occur with staff, board members, contacts, and program details, so it is best to reconfirm relevant details when you call.</p>
+      </div>
+    </section>
