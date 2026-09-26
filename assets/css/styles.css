@@ -353,11 +353,17 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
   position: sticky;
   top: 0;
   z-index: 100;
+  border-bottom: 1px solid var(--line-soft);
+  transition: box-shadow 0.25s;
+}
+.site-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
   background: rgba(255, 255, 255, 0.96);
   backdrop-filter: saturate(160%) blur(8px);
   -webkit-backdrop-filter: saturate(160%) blur(8px);
-  border-bottom: 1px solid var(--line-soft);
-  transition: box-shadow 0.25s;
 }
 .site-header.is-scrolled { box-shadow: 0 6px 24px -14px rgba(44, 46, 53, 0.35); }
 .site-header .wrap {
